@@ -1,5 +1,5 @@
 # ItemTouchHelper
-:cat:RecyclerView滑动删除、长按拖拽示例
+:dog:RecyclerView滑动删除、长按拖拽示例
 
 #### 长按拖拽的效果
 | 长按拖拽    | 滑动删除  |
