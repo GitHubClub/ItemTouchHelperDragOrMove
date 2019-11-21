@@ -1,7 +1,7 @@
-package com.wj.itemtouchhelper.listener;
+package com.ssc.itemtouchhelper.listener;
 
 /**
- * Created by wj on 2018/2/24.
+ * Created by ssc on 2018/2/24.
  */
 
 public interface OnItemSwipeListener {

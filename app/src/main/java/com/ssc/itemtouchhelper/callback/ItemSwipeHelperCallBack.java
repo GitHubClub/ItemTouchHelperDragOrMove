@@ -1,13 +1,13 @@
-package com.wj.itemtouchhelper.callback;
+package com.ssc.itemtouchhelper.callback;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-import com.wj.itemtouchhelper.listener.OnItemSwipeListener;
+import com.ssc.itemtouchhelper.listener.OnItemSwipeListener;
 
 /**
- * Created by wj on 2018/2/24.
+ * Created by ssc on 2018/2/24.
  * 滑动删除
  */
 

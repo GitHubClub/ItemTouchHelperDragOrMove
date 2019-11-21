@@ -1,4 +1,4 @@
-package com.wj.itemtouchhelper;
+package com.ssc.itemtouchhelper;
 
 import org.junit.Test;
 

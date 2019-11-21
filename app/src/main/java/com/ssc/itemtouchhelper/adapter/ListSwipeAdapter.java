@@ -1,4 +1,4 @@
-package com.wj.itemtouchhelper.adapter;
+package com.ssc.itemtouchhelper.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,12 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.wj.itemtouchhelper.R;
+import com.ssc.itemtouchhelper.R;
 
 import java.util.List;
 
 /**
- * Created by wj on 2018/2/24.
+ * Created by ssc on 2018/2/24.
  */
 
 public class ListSwipeAdapter extends RecyclerView.Adapter<ListSwipeAdapter.MySwipeViewHolder> {

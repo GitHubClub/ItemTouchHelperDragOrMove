@@ -1,14 +1,16 @@
-package com.wj.itemtouchhelper.callback;
+package com.ssc.itemtouchhelper.callback;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-import com.wj.itemtouchhelper.listener.OnItemDragListener;
+import com.ssc.itemtouchhelper.listener.OnItemDragListener;
+
+import static android.support.v7.widget.helper.ItemTouchHelper.ACTION_STATE_IDLE;
 
 /**
- * Created by wj on 2018/2/24.
+ * Created by ssc on 2018/2/24.
  * 长按拖拽
  */
 
@@ -29,6 +31,9 @@ public class ItemDragHelperCallBack extends ItemTouchHelper.Callback {
      */
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+        if (viewHolder.getItemViewType() == 1) {
+            return makeMovementFlags(ACTION_STATE_IDLE, 0);
+        }
         RecyclerView.LayoutManager manager = recyclerView.getLayoutManager();
         int dragFlags;
         if (manager instanceof GridLayoutManager || manager instanceof StaggeredGridLayoutManager) {
@@ -51,6 +56,9 @@ public class ItemDragHelperCallBack extends ItemTouchHelper.Callback {
      */
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+        if (viewHolder.getItemViewType() == 1) {
+            return false;
+        }
         //不同Type之间不允许移动
         if (viewHolder.getItemViewType() != target.getItemViewType()) {
             return false;
@@ -62,6 +70,16 @@ public class ItemDragHelperCallBack extends ItemTouchHelper.Callback {
     }
 
     /**
+     * 是否支持长按拖拽，默认值为true
+     *
+     * @return
+     */
+    @Override
+    public boolean isLongPressDragEnabled() {
+        return super.isLongPressDragEnabled();
+    }
+
+    /**
      * 当用户左右滑动的时候执行的方法
      *
      * @param viewHolder
@@ -69,7 +87,7 @@ public class ItemDragHelperCallBack extends ItemTouchHelper.Callback {
      */
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-            
+
     }
 
     public void setOnItemDragListeber(OnItemDragListener onItemDragListener) {
